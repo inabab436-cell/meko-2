@@ -45,7 +45,8 @@ Files:
 - Never imported from a component; import it inside a `createServerFn` handler.
 - **RLS must be enabled on every table** created later (`ALTER TABLE ... ENABLE ROW LEVEL SECURITY`
   plus explicit `GRANT`s) — no table ships without it.
-- The user sets the three secret values themselves in the Secrets section.
+- **Secrets status:** all three keys (`MEKO_SB_URL`, `MEKO_SB_ANON`, `MEKO_SB_SERVICE`) are now
+  configured in the project Secrets section and available to server functions.
 
 ## Next stages
 2. AI-driven dialogue: structured output (mood + line + pose + optional action) aware of the zone,
